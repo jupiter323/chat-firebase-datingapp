@@ -1,0 +1,66 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="head-class">
+  <ion-row>
+    <ion-col col-1 offset-1>
+      <ion-icon name="md-list" (click)='goMenuSide()' style="color:white;font-size:30px;">
+      </ion-icon>
+    </ion-col>
+    <ion-col col-2 offset-3 >
+      <img src="assets/img/mark.png" (click)="goMeetKinkSters()"style="height:34px;"/>      
+    </ion-col>
+    <ion-col col-1  offset-1>
+      <ion-icon name="ios-text-outline" (click)="goMessages()"style="color:white;font-size:30px;">
+      </ion-icon>
+    </ion-col>
+    <ion-col col-2 offset-1>
+      <img src="assets/icon/dungeon.png"(click)="goDungeonFinderWalkthorugh()" style="width:30px;" />
+     
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+
+<ion-content class="slide-image">
+  <p class="font-class">Settings</p>
+  <ion-row style="padding:20px;">
+    <ion-checkbox>
+
+    </ion-checkbox>
+     <p style="font-size:13px;">Remember me</p>
+  </ion-row>
+  <ion-row style="padding:20px;">
+    <ion-checkbox>
+
+    </ion-checkbox>
+     <p style="font-size:13px;">Remember me</p>
+  </ion-row>
+  <ion-row style="padding:20px;">
+    <ion-checkbox>
+
+    </ion-checkbox>
+     <p style="font-size:13px;">Remember me</p>
+  </ion-row >
+  <ion-row style="margin:20px;border-bottom:1px solid #b6b5b1;">
+    <ion-col col-2 style="padding:0;">
+     <p style="padding:0;margin:0;">MSG:</p>
+    </ion-col>
+    <ion-col col-10 style="padding:0;">
+     <p style="padding:0;margin:0;">"Hi, Sorry but I'm not available at the<br>moment. -Fet.xxx Auto AFK message."</p>
+    </ion-col>
+  </ion-row>
+  <ion-row style="padding:20px;width:100%;">
+    <button ion-button color="danger"style="width:100%;" (click)="goMenuSide()">save</button>
+  </ion-row>
+  
+</ion-content>
+
+ 
+<ion-footer>
+  <h2 class="fetwww"><strong>FET.XXX</strong></h2>
+</ion-footer>  
+

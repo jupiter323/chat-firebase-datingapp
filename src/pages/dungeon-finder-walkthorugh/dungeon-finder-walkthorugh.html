@@ -1,0 +1,36 @@
+<!--
+  Generated template for the DungeonFinderWalkthorughPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="head-class">
+  <ion-row>
+    <ion-col col-1 offset-1>
+      <ion-icon name="md-list" (click)='goMenuSide()' style="color:white;font-size:30px;">
+      </ion-icon>
+    </ion-col>
+    <ion-col col-2 offset-3 >
+      <img src="assets/img/mark.png" (click)="goMeetKinkSters()"style="height:34px;"/>      
+    </ion-col>
+    <ion-col col-1  offset-1>
+      <ion-icon name="ios-text-outline" (click)="goMessages()"style="color:white;font-size:30px;">
+      </ion-icon>
+    </ion-col>
+    <ion-col col-2 offset-1>
+      <img src="assets/icon/dungeon.png"(click)="goDungeonFinderWalkthorugh()" style="width:30px;" />
+     
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+
+<ion-content style="background-color:#f7f7f7">
+   <img src="assets/img/dungeonFW.png"/>
+
+  <ion-row>
+    <ion-col col-6 offset-3 >
+      <button ion-button color="danger" class="button-width"(click)="goFinder()">Open Maps</button>   
+    </ion-col>
+  </ion-row> 
+</ion-content>

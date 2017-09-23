@@ -1,0 +1,114 @@
+<!--
+  Generated template for the SignEmailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="nav-color" >
+</ion-header>
+
+
+<ion-content class="slide-image">
+  <p class="font-class">Log in</p>
+   <ion-row class="form-class">
+    <ion-row style="border-bottom:1px solid white;width:100%;">
+     <ion-input type="email" placeholder="Email" [(ngModel)]="emailinput"></ion-input>
+     </ion-row>
+ 
+  <ion-row style="border-bottom:1px solid white;width:100%;margin-top:20px;">
+    <ion-input type="password" placeholder="Password"[(ngModel)]="password"> </ion-input>
+    <ion-icon name="md-eye"style="float:right;margin-top:10px;"></ion-icon>
+  </ion-row>
+ 
+   </ion-row>
+  <p style="height:15px;"></p>
+  <ion-row class="form-class"> 
+    <ion-col col-6>
+      <ion-row>
+      <ion-checkbox ></ion-checkbox>
+      <p style="font-size:13px;">Remember me</p>
+      </ion-row>
+    </ion-col>
+    <ion-col col-6>
+      <p style="color:red;margin-right:0px;float:right;" (click)="ForgotPass()">Forgot Password</p>
+    </ion-col>
+  </ion-row> 
+ 
+  <ion-row class="form-class">
+  <ion-col col-12 style="padding:0;margin:0;">
+      <button ion-button color="danger" class="button-width"  (click)="SignInE()"><ion-icon name="md-mail-open"></ion-icon>&nbsp;&nbsp;  Login</button>    
+  </ion-col>
+  <p style="margin:auto;">Or Login with </p>
+  <ion-col col-12 style="padding:0;margin:0;">
+        <button ion-button color="danger"  class="button-width" (click)="SignInF()"><ion-icon name="logo-facebook"></ion-icon>&nbsp;&nbsp;    Facebook</button>
+  </ion-col>
+    
+  </ion-row >  
+  <ion-row style="text-align:center;">
+    
+    <button ion-button large clear icon-end (click)="SignUpE()" style="margin:auto;"><p style="color:red;margin-right:0px;">Creat an account  <ion-icon name="ios-arrow-forward"></ion-icon></p></button>
+  </ion-row>
+
+
+</ion-content>
+<ion-footer>
+  <h2 class="fetwww"><strong>FET.XXX</strong></h2>
+</ion-footer>
+<!-- <script>angular.module('starter', [
+  'ionic'
+])
+.controller('loginController', [
+  '$scope',
+  function ($scope) {
+    $scope.user = {
+      login: '',
+      password: ''
+    };   
+  }
+])
+.run(function ($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if (window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if (window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+.directive('uiShowPassword', [
+  function () {
+  return {
+    restrict: 'A',
+    scope: true,
+    link: function (scope, elem, attrs) {
+      var btnShowPass = angular.element('<button class="button button-clear"><i class="ion-eye"></i></button>'),
+        elemType = elem.attr('type');
+
+      // this hack is needed because Ionic prevents browser click event 
+      // from elements inside label with input
+      btnShowPass.on('mousedown', function (evt) {
+        (elem.attr('type') === elemType) ?
+          elem.attr('type', 'text') : elem.attr('type', elemType);
+        btnShowPass.toggleClass('button-positive');
+        //prevent input field focus
+        evt.stopPropagation();
+      });
+
+      btnShowPass.on('touchend', function (evt) {
+        var syntheticClick = new Event('mousedown');
+        evt.currentTarget.dispatchEvent(syntheticClick);
+
+        //stop to block ionic default event
+        evt.stopPropagation();
+      });
+
+      if (elem.attr('type') === 'password') {
+        elem.after(btnShowPass);
+      }
+    }
+  };
+}]);
+</script> -->

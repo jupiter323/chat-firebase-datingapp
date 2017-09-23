@@ -1,0 +1,40 @@
+<!--
+  Generated template for the SplashGroupChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content class="tutorial-page">
+
+  <ion-slides pager class="slider">
+    <ion-slide *ngFor="let slide of slides" class="slide-image">
+      <img [src]="slide.image" class="splash  img-height"/>
+      <!-- <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p> -->
+    </ion-slide>
+    
+    <ion-slide class="slide-image">
+      
+      <!-- <img src="assets/img/splash/splashover18.png" class="slide-over18-image"/> -->
+      <h2 class="slide-title"><strong>18</strong>+ <strong>ONLY</strong></h2>
+      
+      <p>It is our duty of care to ensure you are over the legal age in your country. By Signing up you agree to T&Cs</p>
+     
+      <div class="border-line">
+        <p> <b>Last Updated:9/13/2017 </b></p>
+        <p>Fet.xxx, lnc,("Fet.xxx.""we,"and"us") respects the privacy of its users ("you") and has developed this Privacy Policy to demonstrate its commitment to protecting your privacy. ThisPrivacy Policy describes the information we collect, how that information may be used, with whom it may be shared, and your choices about such uses and disclosures. We encourage you to read this Privacy Policy carefully when using our application or services or transacting business with us. By using our website, application or other online services (our "Service"), you are accepting the practices described in this Privacy Policy.</p>
+      </div>
+      <ion-row class="form-class">
+        <button ion-button color="danger" (click)="AcceptDo()" style="width:100%;">YES, OVER 18 & ACCEPT TCS</button>
+      </ion-row>
+     </ion-slide>        
+   
+  
+  </ion-slides>
+</ion-content>
+<ion-footer class="slide-image">
+  <h2 class="fetwww"><strong>FET.XXX</strong></h2>
+</ion-footer>

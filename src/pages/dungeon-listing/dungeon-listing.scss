@@ -1,0 +1,14 @@
+page-dungeon-listing {
+    slider{
+        height: 60px;
+    }
+    .back-img-dun{
+        padding:0;
+        background-image:url('../assets/img/dungeonIner.png');
+        background-size:contain;
+        background-position:center;
+        height:100%;
+        background-repeat:no-repeat;
+        width:100%;
+    }
+}

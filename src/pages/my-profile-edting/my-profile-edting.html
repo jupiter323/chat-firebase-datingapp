@@ -1,0 +1,65 @@
+<!--
+  Generated template for the MyProfileEdtingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="head-class">
+  <ion-row>
+    <ion-col col-1 offset-1>
+      <ion-icon name="md-list" (click)='goMenuSide()' style="color:white;font-size:30px;">
+      </ion-icon>
+    </ion-col>
+    <ion-col col-2 offset-3 >
+      <img src="assets/img/mark.png" (click)="goMeetKinkSters()"style="height:34px;"/>      
+    </ion-col>
+    <ion-col col-1  offset-1>
+      <ion-icon name="ios-text-outline" (click)="goMessages()"style="color:white;font-size:30px;">
+      </ion-icon>
+    </ion-col>
+    <ion-col col-2 offset-1>
+      <img src="assets/icon/dungeon.png"(click)="goDungeonFinderWalkthorugh()" style="width:30px;" />
+     
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+
+<ion-content class="slide-image" >
+  <ion-row>
+    <ion-row style="width:100%;">
+      <ion-col col-12 style="padding:0;">
+        <img src="assets/img/photo.png" class="back-img-ab"/>
+        <img style="width:30%;z-index:4;margin-left:70%;margin-top:5%;" class="back-img-ab" (click)="goMessages()"src="assets/img/notification.png" />
+    
+      </ion-col>
+    </ion-row>
+    <p class="cen" style="width:100%;">Victoria Phillips</p>
+    <ion-row class="samll-big cen" style="width:100%;">
+      <ion-icon name="md-pin" style="color:red;font-size:11px;margin-left:31%;"></ion-icon>
+      <b style="font-size:11px;">&nbsp;&nbsp;&nbsp;moscow,  russia</b>
+    </ion-row>
+  
+    <ion-row style="width:100%;">
+      <ion-col col-8 offset-2>
+          <button ion-button color="danger" class="button-width" style="  border-radius: 20px;"(click)="changePic()">Change Pic</button>    
+      </ion-col>
+    </ion-row>
+  </ion-row>
+  <ion-row style="padding-top:0;">
+    <ion-row class="content-under"style="width:100%;">
+      <ion-col col-4 offset-8 style="height:0px;margin-top:45px;">  
+        <b> [ Edit This ]</b>
+      </ion-col>
+      <ion-col col-12>
+        <p style="font-size:20px;height:10px;color:black;text-align:center;padding:0;margin:auto;">About Vitoria:</p>
+      </ion-col>
+    <ion-col col-12>
+      <p style="font-size:13px;height:10px;color:black;padding:12px;margin:auto;">Indigo, Cyan, Blue, sky, Red, Orchard, Violet, Lilac, Lemon, Sea salt, Ice Cream Cake</p>
+    </ion-col>
+      <ion-col col-12 style="width:100%;padding:0;">
+        <img src="assets/img/content1.png"/>
+      </ion-col>
+    </ion-row>
+  </ion-row>
+</ion-content>

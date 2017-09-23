@@ -1,0 +1,60 @@
+<!--
+  Generated template for the SignInEIncorrectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="nav-color" >
+</ion-header>
+
+
+<ion-content class="slide-image">
+  <p class="font-class">Log in</p>
+  
+   <ion-row class="form-class">
+    <ion-row style="border-bottom:1px solid white;width:100%;">
+     <ion-input type="email" placeholder="Email" [(ngModel)]="emailinput"></ion-input>
+     </ion-row>
+ 
+  <ion-row style="border-bottom:1px solid white;width:100%;margin-top:20px;">
+    <ion-input type="password" placeholder="Password"[(ngModel)]="password"> </ion-input>
+    <ion-icon name="md-eye"style="float:right;margin-top:10px;"></ion-icon>
+  </ion-row>
+ 
+   </ion-row>
+ <p style="height:15px;"></p>
+  <ion-row class="form-class"> 
+    <ion-col col-6>
+      <ion-row>
+      <ion-checkbox ></ion-checkbox>
+      <p style="font-size:13px;">Remember me</p>
+      </ion-row>
+    </ion-col>
+    <ion-col col-6>
+      <p style="color:red;margin-right:0px;float:right;" (click)="ForgotPass()">Forgot Password</p>
+    </ion-col>
+  </ion-row> 
+   <ion-grid>
+     <ion-row class="form-class">
+      <ion-col col-12 style="padding:0;">
+          <button ion-button color="danger" class="button-width"  (click)="SignInE()"><ion-icon name="md-mail-open"></ion-icon>&nbsp;&nbsp;  Login</button>    
+      </ion-col>
+      <ion-col col-12 style="width:120%;">
+        <ion-row style="color:red;font-size:20px;">
+          <ion-icon name="ios-alert"></ion-icon> 
+          <b style="color:red;">Sorry but we don't aloow minors on this app</b> 
+        </ion-row>
+      </ion-col>
+      <ion-col col-12 style="padding:0;">
+            <button ion-button color="danger"  class="button-width" (click)="SignInF()"><ion-icon name="logo-facebook"></ion-icon>&nbsp;&nbsp;    Facebook</button>
+      </ion-col>
+        
+     </ion-row>  
+       <button ion-button large clear icon-end><p style="color:red;margin-right:0px;"(click)="SignUpE()">Creat an account  <ion-icon name="ios-arrow-forward"></ion-icon></p></button>
+        
+ 
+  </ion-grid> 
+</ion-content>
+<ion-footer>
+  <h2 class="fetwww"><strong>FET.XXX</strong></h2>
+</ion-footer>

@@ -1,0 +1,129 @@
+<!--
+  Generated template for the WriteAReviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header class="head-class">
+  <ion-row>
+    <ion-col col-1 offset-1>
+      <ion-icon name="md-list" (click)='goMenuSide()' style="color:white;font-size:30px;">
+      </ion-icon>
+    </ion-col>
+    <ion-col col-2 offset-3 >
+      <img src="assets/img/mark.png" (click)="goMeetKinkSters()"style="height:34px;"/>      
+    </ion-col>
+    <ion-col col-1  offset-1>
+      <ion-icon name="ios-text-outline" (click)="goMessages()"style="color:white;font-size:30px;">
+      </ion-icon>
+    </ion-col>
+    <ion-col col-2 offset-1>
+      <img src="assets/icon/dungeon.png"(click)="goDungeonFinderWalkthorugh()" style="width:30px;" />
+     
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+
+
+<ion-content class="slide-image">
+  <ion-row style="text-align:center;padding:10px;">
+    <ion-col col-2>
+    <ion-icon name="md-close" style="transform:scale(2,2);"></ion-icon>
+    </ion-col>
+    <ion-col col-8>
+      <b style="text-align:center;width:100%;" >Write a review</b>
+    </ion-col>
+    <ion-col col-2>
+      <b style="color:red;">Done</b>
+    </ion-col>
+  </ion-row>
+  <ion-row style="border-bottom:1px solid #323232"></ion-row>
+  <div style="padding:20px;">
+    <b style="color:#a3a3a3">Headline</b>
+    <ion-row style="border-bottom:1px solid #323232"></ion-row>
+    <ion-row>
+      <ion-col col-1>
+      <ion-icon name="ios-add-circle-outline" style="transform:scale(1.5,1.5);color:#a3a3a3;margin-top:22px;"></ion-icon>
+      </ion-col>
+      <ion-col col-11>
+        <p style="color:#ffffff">The service was excellent and super professional. Once the safe was left open and the staff locked it and notified me.</p>
+      </ion-col>
+    </ion-row>
+     <ion-row style="border-bottom:1px solid #323232"></ion-row>
+    <ion-row>
+      <ion-col col-1>
+      <ion-icon name="ios-remove-circle-outline" style="transform:scale(1.5,1.5);color:#a3a3a3;margin-top:22px;"></ion-icon>
+      </ion-col>
+      <ion-col col-11>
+        <p style="color:#a1a1a1">Disadvantages</p>
+      </ion-col>
+    </ion-row>
+
+
+     
+   
+
+    <ion-row style="border-bottom:1px solid #323232"></ion-row>
+     <ion-row style="height:40px;">
+    <ion-col col-6>
+    <p> cleanliness</p>
+    </ion-col>
+    <ion-col col-6>
+    <p style="float:right;color:#2eb872;font-size:19px;">{{mark1}}</p>
+    </ion-col>
+     </ion-row>
+
+       <ion-range min="0.00" max="100.00"  type="single" color="secondary"style="padding:10px;height:40px;"(ionChange)="noteChanged($event)"></ion-range>
+   
+    <ion-row style="height:40px;">
+    <ion-col col-6>
+    <p> Comfort</p>
+    </ion-col>
+    <ion-col col-6>
+    <p style="float:right;color:#2eb872;font-size:19px;">{{mark2}}</p>
+    </ion-col>
+  </ion-row>
+
+
+       <ion-range min="0" max="100" color="secondary"style="padding:10px;height:40px;" (ionChange)="noteChanged1($event)"></ion-range>
+   
+
+  
+ 
+    <ion-row style="height:40px;">
+    <ion-col col-6>
+    <p> Location</p>
+    </ion-col>
+    <ion-col col-6>
+    <p style="float:right;color:#2eb872;font-size:19px;">{{mark3}}</p>
+    </ion-col>
+
+
+     </ion-row>
+
+       <ion-range min="0" max="100"   color="secondary"style="padding:10px;height:40px;"(ionChange)="noteChanged2($event)"></ion-range>
+   
+   
+
+  <ion-row style="height:40px;">
+    <ion-col col-6>
+    <p> Facilities</p>
+    </ion-col>
+    <ion-col col-6>
+    <p style="float:right;color:#2eb872;font-size:19px;">{{mark4}}</p>
+    </ion-col>
+  </ion-row>
+
+   
+
+       <ion-range min="0" max="100"  color="secondary"style="padding:10px;height:40px;"(ionChange)="noteChanged3($event)"></ion-range>
+   
+  
+  <button ion-button color="danger"style="width:100%"(click)=" goYourDR()">Save</button>
+
+
+  </div>
+  <h2 class="fetwww"><strong>FET.XXX</strong></h2>
+</ion-content>

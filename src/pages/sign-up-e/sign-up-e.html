@@ -1,0 +1,64 @@
+<!--
+  Generated template for the SignUpEPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="nav-color" >
+</ion-header>
+
+
+<ion-content class="slide-image">
+  <p class="font-class">Sign up</p>
+  
+   <ion-row class="form-class">
+      <ion-row style="border-bottom:1px solid white;width:100%;">
+        <ion-input type="email" placeholder="Email"></ion-input>
+      </ion-row>
+    
+      <ion-row style="border-bottom:1px solid white;width:100%;">
+        <ion-input type="password" placeholder="Password"> </ion-input>
+        <ion-icon name="md-eye"style="float:right;margin-top:10px;"></ion-icon>
+      </ion-row>
+      <ion-row style="border-bottom:1px solid white;width:100%;">
+          <b style="margin-left:0;margin-top:10px;font-size:13px;font-weight:200;">Date of Birth</b>
+          <ion-input class="my-date-time-picker" type="text" readonly="readonly"></ion-input>
+      </ion-row>
+   </ion-row>
+ 
+  <p style="height:30px;"></p> 
+
+
+<ion-row>
+  <p>You Must be 18+ Years or Older to use this App</p>
+</ion-row>
+  <ion-row class="form-class"> 
+    <ion-col col-6>
+      <ion-checkbox [(ngModel)]="yeCheck"(ionChange)="checkChange1()" checked = {{yeCheck}}></ion-checkbox>
+      <b>Yes, I'm Over 18</b>
+    </ion-col>
+    <ion-col col-6>
+      <ion-row style="float:right;">
+        <ion-checkbox [(ngModel)]="noCheck"(ionChange)="checkChange2()" checked = {{noCheck}}></ion-checkbox>
+        <b>No I'm not.Soz</b>
+      </ion-row>
+    </ion-col>
+  </ion-row> 
+   
+     <ion-row class="form-class">
+      <ion-col col-12 style="padding:0;">
+          <button ion-button color="danger" class="button-width"  (click)="SignUpE()"><ion-icon name="md-mail-open"></ion-icon>&nbsp;&nbsp;  Create an account</button>    
+      </ion-col>
+      <p style="margin:auto;">Or use your facebook to register</p>
+      <ion-col col-12 style="padding:0;">
+            <button ion-button color="danger"  class="button-width" (click)="SignUpF()"><ion-icon name="logo-facebook"></ion-icon>&nbsp;&nbsp;    Facebook</button>
+      </ion-col>
+        
+     </ion-row>  
+          
+ 
+       
+</ion-content>
+<ion-footer>
+  <h2 class="fetwww"><strong>FET.XXX</strong></h2>
+</ion-footer>
