@@ -7,8 +7,8 @@ import { MeetKinkStersPage } from '../meet-kink-sters/meet-kink-sters';
 import { MessagesPage } from '../messages/messages';
 import { DungeonFinderWalkthorughPage } from '../dungeon-finder-walkthorugh/dungeon-finder-walkthorugh';
 import { MenuSidePage } from '../menu-side/menu-side';
-import { UploadNoPicPage } from '../upload-no-pic/upload-no-pic';
 import { AddUserToGroupPage } from '../add-user-to-group/add-user-to-group';
+import { GroupsPage } from '../groups/groups';
 /**
  * Generated class for the ChatGroupPage page.
  *
@@ -18,12 +18,12 @@ import { AddUserToGroupPage } from '../add-user-to-group/add-user-to-group';
 
 @IonicPage()
 @Component({
-  selector: 'page-chat-group',
-  templateUrl: 'chat-group.html',
+    selector: 'page-chat-group',
+    templateUrl: 'chat-group.html',
 })
 export class ChatGroupPage {
 
- @ViewChild(Content) content: Content;
+    @ViewChild(Content) content: Content;
     @ViewChild('chat_input') messageInput: TextInput;
     msgList: ChatMessage[] = [];
     user: UserInfo;
@@ -32,51 +32,51 @@ export class ChatGroupPage {
     showEmojiPicker = false;
 
     addinguser: object;
-    groupmember:Array<{id: any, name: string, avatar: string}>;
+    groupmember: Array<{ id: any, name: string, avatar: string }>;
     constructor(public navCtrl: NavController,
-                public navParams: NavParams,
-                public chatService: ChatService,
-                public events: Events,) {
-        this.groupmember=[];
+        public navParams: NavParams,
+        public chatService: ChatService,
+        public events: Events, ) {
+        this.groupmember = [];
         this.addinguser = this.navParams.get('item');
-                    
+
         // Get the navParams toUserId parameter
         this.toUser = {
             // id: navParams.get('toUserId'),
             // name: navParams.get('toUserName')
-            id:'210000198410281948',
-            name:'Hancock'
+            id: '210000198410281948',
+            name: 'Hancock'
         };
 
-       
+
         // Get mock user information
         this.chatService.getUserInfo()
-        .then((res) => {
-            this.user = res
-        });
+            .then((res) => {
+                this.user = res
+            });
 
 
         this.groupmember.push({
-            id:this.toUser.id,
-            name:this.toUser.name,
-            avatar:'assets/img/photo.png'
+            id: this.toUser.id,
+            name: this.toUser.name,
+            avatar: 'assets/img/photo.png'
         });
         this.groupmember.push({
-            id:'32452352',
-            name:'234532452345',
-            avatar:'assets/to-user.jpg'
+            id: '32452352',
+            name: '234532452345',
+            avatar: 'assets/to-user.jpg'
         });
-        
-        this.groupmember.push({ 
-            id:this.navParams.get('item').id,
+
+        this.groupmember.push({
+            id: this.navParams.get('item').id,
             name: this.navParams.get('item').name,
             avatar: this.navParams.data.item.avatar
         });
     }
     ionViewDidLoad() {
-    console.log('ionViewDidLoad DungeonListingPage');
-    console.log(this.navParams);
-  }
+        console.log('ionViewDidLoad DungeonListingPage');
+        console.log(this.navParams);
+    }
 
     ionViewWillLeave() {
         // unsubscribe
@@ -86,9 +86,9 @@ export class ChatGroupPage {
     ionViewDidEnter() {
         //get message list
         this.getMsg()
-        .then(() => {
-            this.scrollToBottom();
-        });
+            .then(() => {
+                this.scrollToBottom();
+            });
 
         // Subscribe to received  new message events
         this.events.subscribe('chat:received', msg => {
@@ -118,13 +118,13 @@ export class ChatGroupPage {
     getMsg() {
         // Get mock message list
         return this.chatService
-        .getMsgList()
-        .then(res => {
-            this.msgList = res;
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            .getMsgList()
+            .then(res => {
+                this.msgList = res;
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
     /**
@@ -154,12 +154,12 @@ export class ChatGroupPage {
         }
 
         this.chatService.sendMsg(newMsg)
-        .then(() => {
-            let index = this.getMsgIndexById(id);
-            if (index !== -1) {
-                this.msgList[index].status = 'success';
-            }
-        })
+            .then(() => {
+                let index = this.getMsgIndexById(id);
+                if (index !== -1) {
+                    this.msgList[index].status = 'success';
+                }
+            })
     }
 
     /**
@@ -168,7 +168,7 @@ export class ChatGroupPage {
      */
     pushNewMsg(msg: ChatMessage) {
         const userId = this.user.id,
-              toUserId = this.toUser.id;
+            toUserId = this.toUser.id;
         // Verify user relationships
         if (msg.userId === userId && msg.toUserId === toUserId) {
             this.msgList.push(msg);
@@ -190,21 +190,24 @@ export class ChatGroupPage {
         }, 400)
     }
 
-    goMeetKinkSters(){
-      this.navCtrl.push(MeetKinkStersPage);
+    goMeetKinkSters() {
+        this.navCtrl.push(MeetKinkStersPage);
     }
-    goMessages(){
-      this.navCtrl.push(MessagesPage);
+    goMessages() {
+        this.navCtrl.push(MessagesPage);
     }
-    goDungeonFinderWalkthorugh(){
-      this.navCtrl.push(DungeonFinderWalkthorughPage);
+    goDungeonFinderWalkthorugh() {
+        this.navCtrl.push(DungeonFinderWalkthorughPage);
     }
-    goMenuSide(){
-      this.navCtrl.push(MenuSidePage);
+    goMenuSide() {
+        this.navCtrl.push(MenuSidePage);
     }
-    goAddGroup(){
+    goAddGroup() {
         this.navCtrl.push(AddUserToGroupPage);
-        
+
+    }
+    goGroups(){
+       this.navCtrl.push(GroupsPage);
     }
 
 }

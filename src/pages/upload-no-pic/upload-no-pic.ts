@@ -5,6 +5,7 @@ import { MessagesPage } from '../messages/messages';
 import { DungeonFinderWalkthorughPage } from '../dungeon-finder-walkthorugh/dungeon-finder-walkthorugh';
 import { MenuSidePage } from '../menu-side/menu-side';
 import { MyProfileEdtingPage } from '../my-profile-edting/my-profile-edting';
+import { GroupsPage } from '../groups/groups';
 /**
  * Generated class for the UploadNoPicPage page.
  *
@@ -26,24 +27,27 @@ export class UploadNoPicPage {
     console.log('ionViewDidLoad UploadNoPicPage');
   }
 
-  uploadPic(){
+  uploadPic() {
 
   }
-  goMeetKinkSters(){
-      this.navCtrl.push(MeetKinkStersPage);
-    }
-    goMessages(){
-      this.navCtrl.push(MessagesPage);
-    }
-    goDungeonFinderWalkthorugh(){
-      this.navCtrl.push(DungeonFinderWalkthorughPage);
-    }
-    goMenuSide(){
-      this.navCtrl.push(MenuSidePage);
-    }
-     goMyprofileEditing(){
-      this.navCtrl.push(MyProfileEdtingPage);
-    }
+  goMeetKinkSters() {
+    this.navCtrl.push(MeetKinkStersPage);
+  }
+  goMessages() {
+    this.navCtrl.push(MessagesPage);
+  }
+  goDungeonFinderWalkthorugh() {
+    this.navCtrl.push(DungeonFinderWalkthorughPage);
+  }
+  goMenuSide() {
+    this.navCtrl.push(MenuSidePage);
+  }
+  goMyprofileEditing() {
+    this.navCtrl.push(MyProfileEdtingPage);
+  }
+  goGroups(){
+    this.navCtrl.push(GroupsPage);
+  }
 
 
 }

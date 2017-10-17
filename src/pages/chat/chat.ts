@@ -7,8 +7,8 @@ import { MeetKinkStersPage } from '../meet-kink-sters/meet-kink-sters';
 import { MessagesPage } from '../messages/messages';
 import { DungeonFinderWalkthorughPage } from '../dungeon-finder-walkthorugh/dungeon-finder-walkthorugh';
 import { MenuSidePage } from '../menu-side/menu-side';
-import { UploadNoPicPage } from '../upload-no-pic/upload-no-pic';
 import { AddUserToGroupPage } from '../add-user-to-group/add-user-to-group';
+import { GroupsPage } from '../groups/groups';
 
 @IonicPage()
 @Component({
@@ -26,9 +26,9 @@ export class Chat {
     showEmojiPicker = false;
 
     constructor(public navCtrl: NavController,
-                public navParams: NavParams,
-                public chatService: ChatService,
-                public events: Events,) {
+        public navParams: NavParams,
+        public chatService: ChatService,
+        public events: Events, ) {
         // Get the navParams toUserId parameter
         this.toUser = {
             // id: navParams.get('toUserId'),
@@ -38,14 +38,14 @@ export class Chat {
         };
         // Get mock user information
         this.chatService.getUserInfo()
-        .then((res) => {
-            this.user = res
-        });
+            .then((res) => {
+                this.user = res
+            });
     }
     ionViewDidLoad() {
-    console.log('ionViewDidLoad DungeonListingPage');
-    console.log(this.navParams);
-  }
+        console.log('ionViewDidLoad DungeonListingPage');
+        console.log(this.navParams);
+    }
 
     ionViewWillLeave() {
         // unsubscribe
@@ -55,9 +55,9 @@ export class Chat {
     ionViewDidEnter() {
         //get message list
         this.getMsg()
-        .then(() => {
-            this.scrollToBottom();
-        });
+            .then(() => {
+                this.scrollToBottom();
+            });
 
         // Subscribe to received  new message events
         this.events.subscribe('chat:received', msg => {
@@ -87,13 +87,13 @@ export class Chat {
     getMsg() {
         // Get mock message list
         return this.chatService
-        .getMsgList()
-        .then(res => {
-            this.msgList = res;
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            .getMsgList()
+            .then(res => {
+                this.msgList = res;
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
     /**
@@ -123,12 +123,12 @@ export class Chat {
         }
 
         this.chatService.sendMsg(newMsg)
-        .then(() => {
-            let index = this.getMsgIndexById(id);
-            if (index !== -1) {
-                this.msgList[index].status = 'success';
-            }
-        })
+            .then(() => {
+                let index = this.getMsgIndexById(id);
+                if (index !== -1) {
+                    this.msgList[index].status = 'success';
+                }
+            })
     }
 
     /**
@@ -137,7 +137,7 @@ export class Chat {
      */
     pushNewMsg(msg: ChatMessage) {
         const userId = this.user.id,
-              toUserId = this.toUser.id;
+            toUserId = this.toUser.id;
         // Verify user relationships
         if (msg.userId === userId && msg.toUserId === toUserId) {
             this.msgList.push(msg);
@@ -159,21 +159,24 @@ export class Chat {
         }, 400)
     }
 
-    goMeetKinkSters(){
-      this.navCtrl.push(MeetKinkStersPage);
+    goMeetKinkSters() {
+        this.navCtrl.push(MeetKinkStersPage);
     }
-    goMessages(){
-      this.navCtrl.push(MessagesPage);
+    goMessages() {
+        this.navCtrl.push(MessagesPage);
     }
-    goDungeonFinderWalkthorugh(){
-      this.navCtrl.push(DungeonFinderWalkthorughPage);
+    goDungeonFinderWalkthorugh() {
+        this.navCtrl.push(DungeonFinderWalkthorughPage);
     }
-    goMenuSide(){
-      this.navCtrl.push(MenuSidePage);
+    goMenuSide() {
+        this.navCtrl.push(MenuSidePage);
     }
-    goAddGroup(){
+    goAddGroup() {
         this.navCtrl.push(AddUserToGroupPage);
-        
+
     }
-   
+    goGroups(){
+    this.navCtrl.push(GroupsPage);
+  }
+
 }

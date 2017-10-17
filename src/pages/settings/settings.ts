@@ -4,6 +4,7 @@ import { MeetKinkStersPage } from '../meet-kink-sters/meet-kink-sters';
 import { MessagesPage } from '../messages/messages';
 import { DungeonFinderWalkthorughPage } from '../dungeon-finder-walkthorugh/dungeon-finder-walkthorugh';
 import { MenuSidePage } from '../menu-side/menu-side';
+import { GroupsPage } from '../groups/groups';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -24,16 +25,19 @@ export class SettingsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
   }
-   goMeetKinkSters(){
-      this.navCtrl.push(MeetKinkStersPage);
-    }
-    goMessages(){
-      this.navCtrl.push(MessagesPage);
-    }
-    goDungeonFinderWalkthorugh(){
-      this.navCtrl.push(DungeonFinderWalkthorughPage);
-    }
-    goMenuSide(){
-      this.navCtrl.push(MenuSidePage);
-    }
+  goMeetKinkSters() {
+    this.navCtrl.push(MeetKinkStersPage);
+  }
+  goMessages() {
+    this.navCtrl.push(MessagesPage);
+  }
+  goDungeonFinderWalkthorugh() {
+    this.navCtrl.push(DungeonFinderWalkthorughPage);
+  }
+  goMenuSide() {
+    this.navCtrl.push(MenuSidePage);
+  }
+  goGroups(){
+    this.navCtrl.push(GroupsPage);
+  }
 }

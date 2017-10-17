@@ -66,8 +66,8 @@
 .rect-but {
   font-size: 12px;
   border-radius: 0px;
-  width: 58px;
-  height: 22px;
+  width: 70px;
+  height: 25px;
   border: 0.5px solid #d0011a;
   color: #d0011a;
   padding: 5px;
@@ -83,10 +83,8 @@
     padding: 15px;
 }
 .content-under {
-    background-color :#ffffff;
-    
+    background-color :#ffffff;    
     color:  #202020;
-    
 }
 .chat-back{
     background-color: #f1f2f6;
@@ -99,8 +97,8 @@
 }
 
 .swiper-pagination-bullet-active {
-background: red;
-opacity: 1;
+    background: red;
+    opacity: 1;
 }
 .range-bar{
         height:7px !important;
@@ -123,6 +121,15 @@ opacity: 1;
 }
 .range-knob-handle{
     top:33px !important;   
+}
+
+.eye-class-hide{
+  
+  float:right;
+  margin-top:10px;
+  margin-left:20px;
+  // color: yellowgreen;
+
 }
 
 // .login-form .item {

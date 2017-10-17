@@ -9,21 +9,30 @@
 
 
 <ion-content class="slide-image">
-  <p class="font-class">Sign up</p>
-  
+  <p *ngIf = "iamover18" class="font-class">Sign up</p>
+  <p *ngIf = "!iamover18" class="font-class"style="color:red;">Access Denied</p>
+
    <ion-row class="form-class">
       <ion-row style="border-bottom:1px solid white;width:100%;">
-        <ion-input type="email" placeholder="Email"></ion-input>
+        <ion-input type="email" placeholder="Email" [(ngModel)] = "email" (ionChange) = "email_validate()"></ion-input>
+        <ion-icon *ngIf = "check_email" color="secondary" style="float:right; width:8%; padding-top: 10px;" name = "md-checkmark-circle"></ion-icon>
       </ion-row>
     
       <ion-row style="border-bottom:1px solid white;width:100%;">
-        <ion-input type="password" placeholder="Password"> </ion-input>
-        <ion-icon name="md-eye"style="float:right;margin-top:10px;"></ion-icon>
+        <ion-input type = {{pass_input_mode}} placeholder="Password" [(ngModel)] = "password" (ionChange) = "pass_validate()"> </ion-input>
+        <ion-icon name="md-eye" color = {{icon_color}} class = "eye-class-hide" (click) = "val_pass_showing()" id = "eye-state"></ion-icon>
+        <ion-icon *ngIf = "check_pass" color="secondary" style="float:right; width:8%; padding-top: 10px;" name = "md-checkmark-circle"></ion-icon>
+ 
       </ion-row>
-      <ion-row style="border-bottom:1px solid white;width:100%;">
+      <ion-item style="margin-left:0;width:100%;background-color : #202020;color:white">
+          <ion-label style="margin-left:0;margin-top:10px;font-size:13px;font-weight:200;color: #b6b5b1;">Date of birthday</ion-label>
+          <!-- <b style="margin-left:0;margin-top:10px;font-size:13px;font-weight:200;">Date of Birth</b> -->
+          <ion-datetime displayFormat = "MM/DD/YYYY" [(ngModel)]="birthday"></ion-datetime>
+          
+<!--      
           <b style="margin-left:0;margin-top:10px;font-size:13px;font-weight:200;">Date of Birth</b>
-          <ion-input class="my-date-time-picker" type="text" readonly="readonly"></ion-input>
-      </ion-row>
+          <ion-input class="my-date-time-picker" type="date" readonly="readonly"></ion-input> -->
+      </ion-item>
    </ion-row>
  
   <p style="height:30px;"></p> 
@@ -46,12 +55,21 @@
   </ion-row> 
    
      <ion-row class="form-class">
-      <ion-col col-12 style="padding:0;">
+      <ion-col *ngIf = "iamover18"col-12 style="padding:0;">
           <button ion-button color="danger" class="button-width"  (click)="SignUpE()"><ion-icon name="md-mail-open"></ion-icon>&nbsp;&nbsp;  Create an account</button>    
       </ion-col>
-      <p style="margin:auto;">Or use your facebook to register</p>
+         
+      <ion-col *ngIf = "!iamover18" col-12>
+        <ion-row style="color:red;font-size:20px;">
+          <ion-icon name="ios-alert"></ion-icon> 
+          <b style="color:red;">Sorry but we don't aloow minors on this app.</b> 
+        </ion-row>
+      </ion-col>
+      <p *ngIf = "iamover18" style="margin:auto;">Or return to login page</p>
       <ion-col col-12 style="padding:0;">
-            <button ion-button color="danger"  class="button-width" (click)="SignUpF()"><ion-icon name="logo-facebook"></ion-icon>&nbsp;&nbsp;    Facebook</button>
+        <button *ngIf = "iamover18" ion-button color="danger"  class="button-width" (click) = "Return()"><ion-icon name="md-backspace"></ion-icon>&nbsp;&nbsp;   Back</button>
+        <button *ngIf = "!iamover18" ion-button color= "dissable"  class="button-width" style = "font-size:13px;">Come Back when you're Old enough</button>
+
       </ion-col>
         
      </ion-row>  

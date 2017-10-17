@@ -4,9 +4,9 @@ import { MeetKinkStersPage } from '../meet-kink-sters/meet-kink-sters';
 import { MessagesPage } from '../messages/messages';
 import { DungeonFinderWalkthorughPage } from '../dungeon-finder-walkthorugh/dungeon-finder-walkthorugh';
 import { MenuSidePage } from '../menu-side/menu-side';
-import { UploadNoPicPage } from '../upload-no-pic/upload-no-pic';
 import { Chat } from '../chat/chat';
 import { WriteAReviewPage } from '../write-a-review/write-a-review';
+import { GroupsPage } from '../groups/groups';
 /**
  * Generated class for the DungeonListingPage page.
  *
@@ -20,43 +20,45 @@ import { WriteAReviewPage } from '../write-a-review/write-a-review';
   templateUrl: 'dungeon-listing.html',
 })
 export class DungeonListingPage {
-  toUser:Object;
+  toUser: Object;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.toUser = {
-      toUserId:'210000198410281948',
-      toUserName:'Hancock'
+      toUserId: '210000198410281948',
+      toUserName: 'Hancock'
     }
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DungeonListingPage');
   }
-   goMeetKinkSters(){
-      this.navCtrl.push(MeetKinkStersPage);
-    }
-    goMessages(){
-      this.navCtrl.push(MessagesPage);
-    }
-    goDungeonFinderWalkthorugh(){
-      this.navCtrl.push(DungeonFinderWalkthorughPage);
-    }
-    goMenuSide(){
-      this.navCtrl.push(MenuSidePage);
-    }
-    goChat(){
-      this.navCtrl.push(Chat, {navParams:this.toUser});
-      
-    }
-    goWriteAR(){
-      this.navCtrl.push(WriteAReviewPage);
-    }
+  goMeetKinkSters() {
+    this.navCtrl.push(MeetKinkStersPage);
+  }
+  goMessages() {
+    this.navCtrl.push(MessagesPage);
+  }
+  goDungeonFinderWalkthorugh() {
+    this.navCtrl.push(DungeonFinderWalkthorughPage);
+  }
+  goMenuSide() {
+    this.navCtrl.push(MenuSidePage);
+  }
+  goChat() {
+    this.navCtrl.push(Chat, { navParams: this.toUser });
 
+  }
+  goWriteAR() {
+    this.navCtrl.push(WriteAReviewPage);
+  }
+  goGroups(){
+    this.navCtrl.push(GroupsPage);
+  }
   //   slides = [
   //   {
   //     // title: "Welcome to the Docs!",
   //     // description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
   //     image: "../assets/img/dungeonIner.png",
-      
+
   //   },
   //   {
   //     // title: "What is Ionic?",
@@ -77,6 +79,6 @@ export class DungeonListingPage {
   //   //    image: "assets/img/splash/splashover18.png",
   //   // }
   // ];
- 
+
 
 }

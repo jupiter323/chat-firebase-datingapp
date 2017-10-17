@@ -4,6 +4,7 @@ import { MeetKinkStersPage } from '../meet-kink-sters/meet-kink-sters';
 import { MessagesPage } from '../messages/messages';
 import { MenuSidePage } from '../menu-side/menu-side';
 import { DungeonFinderPage } from '../dungeon-finder/dungeon-finder';
+import { GroupsPage } from '../groups/groups';
 /**
  * Generated class for the DungeonFinderWalkthorughPage page.
  *
@@ -24,20 +25,23 @@ export class DungeonFinderWalkthorughPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DungeonFinderWalkthorughPage');
   }
-  goMeetKinkSters(){
-      this.navCtrl.push(MeetKinkStersPage);
-    }
-    goMessages(){
-      this.navCtrl.push(MessagesPage);
-    }
-    goDungeonFinderWalkthorugh(){
-      this.navCtrl.push(DungeonFinderWalkthorughPage);
-    }
-    goMenuSide(){
-      this.navCtrl.push(MenuSidePage);
-    }
-    goFinder(){
-      this.navCtrl.push(DungeonFinderPage);
-    }
+  goMeetKinkSters() {
+    this.navCtrl.push(MeetKinkStersPage);
+  }
+  goMessages() {
+    this.navCtrl.push(MessagesPage);
+  }
+  goDungeonFinderWalkthorugh() {
+    this.navCtrl.push(DungeonFinderWalkthorughPage);
+  }
+  goMenuSide() {
+    this.navCtrl.push(MenuSidePage);
+  }
+  goFinder() {
+    this.navCtrl.push(DungeonFinderPage);
+  }
+  goGroups(){
+    this.navCtrl.push(GroupsPage);
+  }
 
 }

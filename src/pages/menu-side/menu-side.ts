@@ -7,6 +7,7 @@ import { DungeonFinderWalkthorughPage } from '../dungeon-finder-walkthorugh/dung
 import { MessagesPage } from '../messages/messages';
 import { SettingsPage } from '../settings/settings';
 import { GetStartedPage } from '../get-started/get-started';
+import { Storage } from '@ionic/storage';
 /**
  * Generated class for the MenuSidePage page.
  *
@@ -21,7 +22,7 @@ import { GetStartedPage } from '../get-started/get-started';
 })
 export class MenuSidePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
   }
 
   ionViewDidLoad() {
@@ -54,6 +55,9 @@ export class MenuSidePage {
      this.navCtrl.push(SettingsPage);
   }
   goLogout(){
-    this.navCtrl.push(GetStartedPage);
+    let enable:false;
+    this.storage.clear();
+    this.storage.set('enable', enable);
+    this.navCtrl.setRoot(GetStartedPage);
   }
 }

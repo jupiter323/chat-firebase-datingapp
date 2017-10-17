@@ -5,7 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { SplashGroupChatPage } from '../pages/splash-group-chat/splash-group-chat';
 
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 @Component({
   templateUrl: 'app.html'
@@ -19,8 +18,8 @@ export class MyApp {
 
  
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,public screenOrientation: ScreenOrientation) {
-    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+    // this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
     this.initializeApp();
 
     //used for an example of ngFor and navigation

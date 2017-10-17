@@ -27,9 +27,9 @@ export class GetStartedPage {
     this.navCtrl.push(SignEmailPage);
 
   }
-  SignInF(){
-    this.navCtrl.push(MyProfilePage);
-  }
+  // SignInF(){
+  //   this.navCtrl.push(MyProfilePage);
+  // }
   SignUpE(){
     this.navCtrl.push(SignUpEPage);
   }

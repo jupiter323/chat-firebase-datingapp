@@ -5,6 +5,7 @@ import { MessagesPage } from '../messages/messages';
 import { DungeonFinderWalkthorughPage } from '../dungeon-finder-walkthorugh/dungeon-finder-walkthorugh';
 import { MenuSidePage } from '../menu-side/menu-side';
 import { Chat } from '../chat/chat';
+import { GroupsPage } from '../groups/groups';
 /**
  * Generated class for the ItsAMatchPage page.
  *
@@ -19,32 +20,35 @@ import { Chat } from '../chat/chat';
 })
 export class ItsAMatchPage {
 
-   toUser:Object;
+  toUser: Object;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.toUser = {
-      toUserId:'210000198410281948',
-      toUserName:'Hancock'
+      toUserId: '210000198410281948',
+      toUserName: 'Hancock'
     }
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItsAMatchPage');
   }
-  goMeetKinkSters(){
-      this.navCtrl.push(MeetKinkStersPage);
-    }
-    goMessages(){
-      this.navCtrl.push(MessagesPage);
-    }
-    goDungeonFinderWalkthorugh(){
-      this.navCtrl.push(DungeonFinderWalkthorughPage);
-    }
-    goMenuSide(){
-      this.navCtrl.push(MenuSidePage);
-    }
-    goChat1(){
-      this.navCtrl.push(Chat,{navParams:this.toUser});
+  goMeetKinkSters() {
+    this.navCtrl.push(MeetKinkStersPage);
+  }
+  goMessages() {
+    this.navCtrl.push(MessagesPage);
+  }
+  goDungeonFinderWalkthorugh() {
+    this.navCtrl.push(DungeonFinderWalkthorughPage);
+  }
+  goMenuSide() {
+    this.navCtrl.push(MenuSidePage);
+  }
+  goChat1() {
+    this.navCtrl.push(Chat, { navParams: this.toUser });
 
-    }
-   
+  }
+  goGroups(){
+    this.navCtrl.push(GroupsPage);
+  }
+
 }

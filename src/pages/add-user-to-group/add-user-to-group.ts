@@ -6,6 +6,7 @@ import { MessagesPage } from '../messages/messages';
 import { DungeonFinderWalkthorughPage } from '../dungeon-finder-walkthorugh/dungeon-finder-walkthorugh';
 import { MenuSidePage } from '../menu-side/menu-side';
 import { ChatGroupPage } from '../chat-group/chat-group';
+import { GroupsPage } from '../groups/groups';
 
 /**
  * Generated class for the AddUserToGroupPage page.
@@ -21,11 +22,11 @@ import { ChatGroupPage } from '../chat-group/chat-group';
 })
 export class AddUserToGroupPage {
 
- selectedItem: any;
+  selectedItem: any;
   avatars: string[];
   state: string[];
   idarray: any[];
-  items: Array<{name: string, note: string, avatar: string, addstate:any, onlinestate: string, id:any}>;
+  items: Array<{ name: string, note: string, avatar: string, addstate: any, onlinestate: string, id: any }>;
   // iconname: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     // If we navigated to this page, we will have an item available as a nav param
@@ -36,19 +37,19 @@ export class AddUserToGroupPage {
     // this.avatas = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
     // 'american-football', 'boat', 'bluetooth', 'build'];
     this.avatars = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+      'american-football', 'boat', 'bluetooth', 'build'];
     this.state = ['onlinestate', 'offlinestate'];
     this.items = [];
-    
+
     for (let i = 1; i < 10; i++) {
       this.items.push({
         name: 'Item ' + i,
         note: 'This is item #' + i,
         //  icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-        avatar: 'assets/img/photo'+i+'.png',
+        avatar: 'assets/img/photo' + i + '.png',
         addstate: 'md-person-add',
         onlinestate: this.state[Math.floor(Math.random() * this.state.length)],
-        id: Math.floor(34245653635*Math.random())
+        id: Math.floor(34245653635 * Math.random())
       });
     }
   }
@@ -60,25 +61,28 @@ export class AddUserToGroupPage {
     // // });
     // if(this.iconname=='md-person-add')
     // this.iconname='md-remove';
-    if(item.addstate=='md-person-add')
-      item.addstate='md-remove';
+    if (item.addstate == 'md-person-add')
+      item.addstate = 'md-remove';
     else
-      item.addstate='md-person-add';
-    this.navCtrl.push(ChatGroupPage,{item:item});
+      item.addstate = 'md-person-add';
+    this.navCtrl.push(ChatGroupPage, { item: item });
 
   }
 
-    goMeetKinkSters(){
-      this.navCtrl.push(MeetKinkStersPage);
-    }
-    goMessages(){
-      this.navCtrl.push(MessagesPage);
-    }
-    goDungeonFinderWalkthorugh(){
-      this.navCtrl.push(DungeonFinderWalkthorughPage);
-    }
-    goMenuSide(){
-      this.navCtrl.push(MenuSidePage);
-    }
+  goMeetKinkSters() {
+    this.navCtrl.push(MeetKinkStersPage);
+  }
+  goMessages() {
+    this.navCtrl.push(MessagesPage);
+  }
+  goDungeonFinderWalkthorugh() {
+    this.navCtrl.push(DungeonFinderWalkthorughPage);
+  }
+  goMenuSide() {
+    this.navCtrl.push(MenuSidePage);
+  }
+  goGroups(){
+    this.navCtrl.push(GroupsPage);
+  }
 
 }

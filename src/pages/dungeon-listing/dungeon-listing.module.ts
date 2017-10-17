@@ -10,4 +10,4 @@ import { DungeonListingPage } from './dungeon-listing';
     IonicPageModule.forChild(DungeonListingPage),
   ],
 })
-export class DungeonListingPageModule {}
+export class DungeonListingPageModule { }
